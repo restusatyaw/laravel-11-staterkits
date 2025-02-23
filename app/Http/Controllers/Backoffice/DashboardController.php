@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Http\Controllers\Backoffice;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class DashboardController extends Controller
+{
+    function index() {
+        return view('backoffice.pages.dashboard.index', [
+            'page_title' => 'Dashbord'
+        ]);
+    }
+}
