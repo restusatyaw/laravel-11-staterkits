@@ -95,7 +95,23 @@ class TransactionService
                         'url_detail' => route('backoffice.transaction.detail', $row->id),
                     ])->render();
                 })
-                ->rawColumns(['action'])
+                ->editColumn('user_id', function ($row) {
+                    return $row->customer->name ?? 'N/A';
+                })
+                ->editColumn('donation_type_id', function ($row) {
+                    return $row->donationType->name ?? 'N/A';
+                })
+                ->editColumn('payment_method', function ($row) {
+                    return view('backoffice.components.customField', [
+                        'payment_method' => $row->payment_method
+                    ])->render();
+                })
+                ->addColumn('payment_status', function ($row) {
+                    return view('backoffice.components.customField', [
+                        'payment_status' => $row->status
+                    ])->render();
+                })
+                ->rawColumns(['action','payment_method','payment_status'])
                 ->make(true);
         } catch (Exception $e) {
             Log::error("Error getting datatable for transaction: " . $e->getMessage());

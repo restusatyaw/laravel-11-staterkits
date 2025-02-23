@@ -58,8 +58,8 @@
                     name: 'payment_method'
                 },
                 {
-                    data: 'status',
-                    name: 'status'
+                    data: 'payment_status',
+                    name: 'payment_status'
                 },
                 {
                     data: 'created_at',

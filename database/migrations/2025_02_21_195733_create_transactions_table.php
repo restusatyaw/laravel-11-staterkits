@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('receipt_payment')->nullable();
             $table->double('total_payment', 15, 2)->nullable()->default(0);
             $table->enum('payment_method', ['bank_transfer', 'manual'])->default('manual');
-            $table->enum('status', ['pending', 'expired','cenceled','completed'])->default('pending');
+            $table->enum('status', ['pending', 'expired','cenceled','completed','proccessing'])->default('pending');
             $table->dateTime('payment_date');
             $table->timestamps();
         });
