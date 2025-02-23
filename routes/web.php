@@ -4,6 +4,7 @@ use App\Http\Controllers\Backoffice\CustomerController;
 use App\Http\Controllers\Backoffice\DashboardController;
 use App\Http\Controllers\Backoffice\DonationTypeController;
 use App\Http\Controllers\Backoffice\LoginController;
+use App\Http\Controllers\Backoffice\TransactionController;
 use App\Http\Controllers\Backoffice\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,16 @@ Route::prefix('1secure')->middleware(['auth:web'])->name('backoffice.')->group(f
         Route::get('/get-data', 'getDatatable')->name('getdata');
     });
 
+    Route::controller(TransactionController::class)->prefix('transaction')->name('transaction.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/{id}/edit', 'edit')->name('edit');
+        Route::get('/{id}/show', 'show')->name('detail');
+        Route::put('/{id}/update', 'update')->name('update');
+        Route::post('/store', 'store')->name('store');
+        Route::delete('/{id}/delete', 'destroy')->name('destroy');
+        Route::get('/get-data', 'getDatatable')->name('getdata');
+    });
     
 
     Route::prefix('master-data')->group(function () {

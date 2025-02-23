@@ -15,8 +15,9 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('code', 100);
             $table->uuid('user_id');
-            $table->uuid('donation_type');
+            $table->uuid('donation_type_id');
             $table->text('snap_token')->nullable();
+            $table->text('receipt_payment')->nullable();
             $table->double('total_payment', 15, 2)->nullable()->default(0);
             $table->enum('payment_method', ['bank_transfer', 'manual'])->default('manual');
             $table->enum('status', ['pending', 'expired','cenceled','completed'])->default('pending');

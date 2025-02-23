@@ -22,7 +22,7 @@
 
         <li class="menu-header">Produktifitas</li>
         <li><a class="nav-link" href="{{route('backoffice.customer.index')}}"><i class="fas fa-users"></i> <span>List Customer</span></a></li>
-        <li><a class="nav-link" href=""><i class="fas fa-wallet"></i> <span>Transaksi Zakat</span></a></li>
+        <li><a class="nav-link" href="{{route('backoffice.transaction.index')}}"><i class="fas fa-wallet"></i> <span>Transaksi Zakat</span></a></li>
 
         <li class="dropdown">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
