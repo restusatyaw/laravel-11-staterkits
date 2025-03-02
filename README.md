@@ -8,7 +8,7 @@ Starter Kit untuk Laravel 11 dengan fitur bawaan yang siap digunakan untuk penge
 - 🔑 **Login & Authentication** (menggunakan JWT)  
 - 📊 **Dashboard** untuk menampilkan informasi utama  
 - 👥 **User Management** (CRUD pengguna)  
-- 🎨 **Tampilan responsif dengan Tailwind CSS**  
+- 🎨 **Tampilan responsif dengan Bootstrap CSS**  
 
 ## **📂 Instalasi**
 1. **Clone repository**
@@ -48,16 +48,10 @@ Starter Kit untuk Laravel 11 dengan fitur bawaan yang siap digunakan untuk penge
 
 ## **🛠 Dependency**
 - **Yarn datatable**  
-- **restusatyaw/pattren** 
+- **restusatyaw/pattren-maker** 
 
 ## **📜 Lisensi**
-Disusun oleh restusatyaw 
-
----
+Disusun oleh restusatyaw
 
 🔥 **Nikmati kemudahan membangun aplikasi dengan Laravel 11 Starter Kit ini!** 🚀  
-```
-
----
-
 Kalau mau ditambahkan atau diperbaiki, tinggal bilang aja! 😃
