@@ -21,23 +21,7 @@
         </li>
 
         <li class="menu-header">Produktifitas</li>
-        <li><a class="nav-link" href="{{route('backoffice.customer.index')}}"><i class="fas fa-users"></i> <span>List Customer</span></a></li>
-        <li><a class="nav-link" href="{{route('backoffice.transaction.index')}}"><i class="fas fa-wallet"></i> <span>Transaksi Zakat</span></a></li>
 
-        <li class="dropdown">
-            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
-              <i class="fas fa-paste"></i>
-              <span>Laporan</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                <a class="nav-link" href="layout-default.html">Customer</a>
-              </li>
-              <li>
-                <a class="nav-link" href="layout-transparent.html">Pembayaran Zakat</a>
-              </li>
-            </ul>
-          </li>
           <li class="dropdown">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
               <i class="fas fa-box"></i>
@@ -46,9 +30,6 @@
             <ul class="dropdown-menu">
               <li>
                 <a class="nav-link" href="{{route('backoffice.user.index')}}">Pengguna</a>
-              </li>
-              <li>
-                <a class="nav-link" href="{{route('backoffice.donationtype.index')}}">Jenis Zakat</a>
               </li>
             </ul>
           </li>

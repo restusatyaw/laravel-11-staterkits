@@ -17,9 +17,5 @@ Route::prefix('v1')->group(function () {
             Route::get('/me','getUser');
             Route::post('/logout','logout');
         });
-        Route::controller(TransactionController::class)->prefix('transaction')->group(function(){
-            Route::post('/store','store');
-            Route::put('/{id}/update-payment-status','updatePaymentStatus');
-        });
     });
 });

@@ -21,3 +21,6 @@
     <figure class="avatar mr-2 avatar-sm" data-initial="PH"></figure>
     <span>{{$name}}</span>
 @endif
+@if (isset($currency))
+    <span>Rp. {{ number_format($currency, 2, ',', '.') }}</span>
+@endif

@@ -19,52 +19,6 @@ class CustomerController extends Controller
     {
         $this->userServices = $userService;
     }
-    /**
-     * @SWG\Post(
-     *     path="/users",
-     *     summary="Get a list of users",
-     *     tags={"Users"},
-     *     @SWG\Response(response=200, description="Successful operation"),
-     *     @SWG\Response(response=400, description="Invalid request")
-     * )
-     */
-    public function register(Request $request)
-    {
-
-        try {
-            $validator = Validator::make($request->all(), [
-                'name' => 'required|string|max:255',
-                'email' => 'required|string|email|max:255|unique:users',
-                'password' => 'required|string|min:8',
-            ]);
-    
-            if($validator->fails()){
-                return response()->json($validator->errors()->toJson(), 400);
-            }
-    
-            $data = $request->only([
-                'name',
-                'email',
-                'password',
-                'confirm_password'
-            ]);
-            $data['is_mobile_app'] = 1;
-            $data['role_id'] = Role::where('name', 'Customer')->first()->id;
-            $user = $this->userServices->create($data);
-
-            return response()->json([
-                'message' => 'register successfully',
-                'status' => true,
-            ], 201);
-        } catch (\Exception $th) {
-            return response()->json([
-                'message' => 'register fail on : '.' '. $th->getMessage(),
-                'status' => false,
-            ], 500);
-        }
-
-        
-    }
 
     function login(Request $request) 
     {
@@ -76,14 +30,6 @@ class CustomerController extends Controller
             }
 
             $findUser = $this->userServices->getFilteredData(['email' => $credentials['email']])->first();
-
-
-            if($findUser && $findUser->is_mobile_app == 0){
-                return response()->json([
-                    'status' => false,
-                    'message' => 'akun tidak ditemukan'
-                ], 500);
-            }
 
             $user = auth()->user();
 
