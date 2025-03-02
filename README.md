@@ -1,6 +1,3 @@
-Berikut adalah isi **README.md** untuk Starter Kit Laravel 11 dengan fitur **Login, Dashboard, dan User Management**.  
-
----
 
 ## **README.md**  
 
@@ -19,8 +16,7 @@ Starter Kit untuk Laravel 11 dengan fitur bawaan yang siap digunakan untuk penge
 1. **Clone repository**
    ```sh
    git clone https://github.com/restusatyaw/laravel-11-staterkits.git
-   cd repository
-   ```
+   cd repository```
 
 2. **Install dependencies**
    ```sh
