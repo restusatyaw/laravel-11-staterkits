@@ -1,5 +1,3 @@
-
-## **README.md** 
 # 🚀 Laravel 11 Starter Kit
 
 Starter Kit untuk Laravel 11 dengan fitur bawaan yang siap digunakan untuk pengembangan proyek web.  
